@@ -1,0 +1,476 @@
+// document configurations **********
+//*imports
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+//*tags
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #EFEFEF;
+}
+
+//**************************************************
+//UI components
+.callback-btn {
+  border: 0.1rem solid #66C05D;
+  border-radius: 2.5rem;
+  background: #ffffff;
+  font-size: 0.875rem;
+  text-align: center;
+  width: 10.6rem;
+  height: 2.5rem;
+  transition: .3s;
+
+  &:hover {
+    cursor: pointer;
+    background: #66C05D;
+    color: #EFEFEF;
+  }
+}
+
+.more-info-btm {
+  border: 0.125rem solid #ffffff;
+  border-radius: 2.5rem;
+  background: #66C05D;
+  color: #ffffff;
+  text-align: center;
+  width: 10.6rem;
+  height: 2.5rem;
+  transition: .3s;
+
+  &:hover {
+    cursor: pointer;
+    background: #ffffff;
+    color: #000000;
+  }
+}
+
+.buy-btn {
+  border: none;
+  border-radius: 2rem;
+  background: #66C05D;
+  color: #ffffff;
+  text-align: center;
+  width: 8.1rem;
+  height: 2.1rem;
+  transition: .3s;
+  font-size: 0.9rem;
+  font-weight: 400;
+
+  &:hover {
+    cursor: pointer;
+    background: #ffffff;
+    border: 0.0825rem solid #66C05D;
+    color: #000000;
+  }
+}
+
+.email-input {
+  width: 14rem;
+  height: 2.1rem;
+  background: #ffffff;
+  border: none;
+  border-radius: 30px;
+  text-align: start;
+
+  &::placeholder {
+    color: #C4C4C4;
+    font-weight: 400;
+    font-size: 0.9rem;
+    padding-left: 1rem;
+  }
+}
+
+.shop-map-btn {
+  width: 10.7rem;
+  height: 2.3rem;
+  border: 0.125rem solid #ffffff;
+  color: #ffffff;
+  background: #66C05D;
+  border-radius: 30px;
+
+  &:hover {
+    cursor: pointer;
+    background: #ffffff;
+    color: #000000;
+  }
+}
+
+
+//**************************************************
+//main wrapper - div
+.landing {
+  padding: 0;
+  margin: 0;
+  max-width: 120rem;
+  display: grid;
+  background: #EFEFEF;
+}
+
+//**************************************************
+//top-header - section
+.top-header {
+}
+
+.top-header-menu {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1rem;
+
+  &__inner {
+    display: grid;
+    justify-content: center;
+  }
+
+  &__list {
+    height: 3.125rem;
+    padding: 0;
+    margin: 0;
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto auto;
+    justify-items: start;
+    align-items: center;
+  }
+
+  &__item {
+    text-align: center;
+    margin-left: 1rem;
+
+    a {
+      color: #000000;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+//**************************************************
+// header-landing - section
+.header-landing {
+  background: #EFEFEF;
+}
+
+.header {
+  background: #ffff;
+  display: grid;
+  grid-template-rows: auto auto;
+
+  &__logo-menu {
+    height: 7.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 0.0625rem solid #EFEFEF;
+  }
+
+  &__logo-menu-logo {
+    align-self: center;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 0.25rem;
+    color: #66C05D;
+
+    a {
+      color: #66C05D;
+    }
+
+    &:before {
+      content: '';
+      display: inline-block;
+      border: 1px solid #66C05D;
+      width: 40px;
+      height: 40px;
+      transform: rotate(45deg);
+      margin: 0 1rem 0 1rem;
+    }
+  }
+
+  &__logo-menu-text {
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-content: center;
+
+    span {
+      margin-right: 3rem;
+      font-size: 1rem;
+    }
+  }
+
+  &__menu {
+  }
+
+  &__menu-inner {
+    display: grid;
+    justify-content: center;
+  }
+
+  &__menu-list {
+    height: 4.5rem;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    align-items: center;
+  }
+
+  &__menu-item {
+    text-align: center;
+    margin-right: 2rem;
+
+    a {
+      color: black;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+//**************************************************
+// landing-banner - section
+.landing-banner {
+  background: #ffffff;
+}
+
+.banner {
+  height: 37.75rem;
+
+  &__inner {
+    background-image: url("/imgs/banner-bg.png");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 40%;
+    align-items: center;
+  }
+
+  &__inner-content {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(auto, 1fr) );
+    padding-left: 5rem;
+
+    h2 {
+
+      font-weight: 700;
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+
+    }
+
+    button {
+
+    }
+  }
+
+}
+
+//**************************************************
+//landing-products - section
+.landing-products {
+}
+
+.products {
+  //justify-self: center;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  h3 {
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(16rem, 1fr) );
+    grid-gap: 2rem;
+
+    justify-items: center;
+  }
+
+  &__item {
+    background: #ffffff;
+    display: grid;
+    height: 22.6875rem;
+    max-width: 14rem;
+    justify-items: center;
+    padding: 1rem;
+
+    h3 {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__img {
+    width: 7.8rem;
+    height: 10.375rem;
+  }
+
+  &__text {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+}
+
+.carts-wrapper {
+  margin-top: 6rem;
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(33rem, 1fr));
+  color: white;
+  grid-gap: 2rem;
+  @media (max-width: 1150px) {
+    justify-self: center;
+  }
+
+  .email-subscribe {
+    background: #66C05D;
+    display: grid;
+    justify-self: end;
+    grid-template-columns: repeat(2, 1fr);
+    width: 33.75rem;
+    height: 13.25rem;
+    @media (max-width: 1150px) {
+      justify-self: center;
+    }
+
+    &__text {
+      padding: 2rem 0 2rem 2rem;
+      text-align: start;
+      display: grid;
+      justify-items: start;
+
+      h3 {
+        font-size: 1.125rem;
+        font-weight: 700;
+        padding: 0;
+        margin: 0;
+      }
+
+      p {
+        font-size: 0.9rem;
+        font-weight: 400;
+
+      }
+    }
+
+    &__img {
+      width: 8.75rem;
+      height: 6.625rem;
+      border: 0.5rem solid #ffffff;
+      opacity: 0.4;
+      border-radius: 2rem;
+      align-self: center;
+      justify-self: center;
+    }
+  }
+
+  .site-map {
+    display: grid;
+    justify-self: start;
+    background: #66C05D;
+    width: 33.75rem;
+    height: 13.25rem;
+    grid-template-columns: 50%;
+    align-items: center;
+    @media (max-width: 1150px) {
+      justify-self: center;
+    }
+
+    &__text {
+      width: 100%;
+      padding: 2rem 0 2rem 2rem;
+      display: grid;
+      text-align: start;
+
+      h3 {
+        font-size: 1.125rem;
+        font-weight: 700;
+        padding: 0;
+        margin: 0;
+      }
+
+      p {
+        font-size: 0.9rem;
+        font-weight: 400;
+
+      }
+    }
+  }
+}
+
+//**************************************************
+// footer-landing - section
+.footer-landing {
+  margin-top: 5rem;
+}
+
+.footer {
+  height: 7.5rem;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  background: #ffffff;
+  align-items: center;
+
+  &__icons {
+  }
+
+  &__text {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.social-links {
+  padding-left: 4rem;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  max-width: 300px;
+
+  &__social {
+    width: 2.81rem;
+    height: 2.81rem;
+    border: 0.1rem solid #66C05D;
+    border-radius: 100%;
+    background: #ffffff;
+  }
+}
+
+//**************************************************
+// bottom-footer-landing - section
+.bottom-footer-landing {
+}
+
+.bottom-footer {
+  display: grid;
+  height: 4rem;
+  grid-template-columns: 60% 40%;
+  align-items: center;
+  justify-items: center;
+
+
+  p {
+    font-size: 0.75rem;
+    color: #828282;
+  }
+}
+
+//**************************************************
+//
+//**************************************************
